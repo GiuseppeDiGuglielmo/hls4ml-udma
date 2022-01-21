@@ -1,0 +1,8 @@
+source /tools/Xilinx/Petalinux/2019.1/settings.sh
+
+if [ -z "$PETALINUX" ]; then
+    echo "ERROR: couldn't find a valid Petalinux installation."
+    return 1
+else
+    echo "INFO: environment ready: PETALINUX = $PETALINUX"
+fi
