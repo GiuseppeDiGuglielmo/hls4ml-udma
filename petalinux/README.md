@@ -1,6 +1,6 @@
 # PetaLinux
 
-PetaLinux (or Petalinux SDK) is a Xilinx development tool that contains everything necessary to build, develop, test, and deploy embedded Linux systems (Zynq and ZynqMP boards). For more details see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
+PetaLinux is a Xilinx development tool that contains everything necessary to build, develop, test, and deploy embedded Linux systems (Zynq and ZynqMP boards). For more details see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
 
 These guidelines are for Avnet Ultra96-V2 and Petalinux v2019.1:
 - targeting a different board should be as easy as downloading a different Board Support Package (BSP);
