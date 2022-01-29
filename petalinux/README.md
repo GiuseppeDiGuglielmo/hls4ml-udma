@@ -168,7 +168,7 @@ See the *Step-by-step Project Creation* section if you want to be a little more 
   - user `root`
   - password `root`
  
-- Start enable the WiFi
+- Start the WiFi
   ```
   sudo ./wifi.sh
   ```
