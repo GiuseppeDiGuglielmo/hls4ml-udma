@@ -74,7 +74,7 @@ echo $PETALINUX
   export PROJECT_DIR=ultra96v2_oob_2019_1
   ```
 
-- Download the Ultra96-v2 reference board support package (BSP):
+- Download the Ultra96-v2 reference Board Support Package (BSP). See the additional instructions in the directory `bsp`:
   ```
   cd bsp
   make
@@ -109,11 +109,26 @@ echo $PETALINUX
 
 - Mount the SD card on your host machine.
 
-- Copy the boot image into the root directory of the first partition which is in FAT32 format in the SD card:
+- Copy the boot image into the `boot` directory on the SD card whose partition should be in FAT32 format:
   ```
   cd $PROJECT_DIR
-  cp images/linux/BOOT.BIN /media/$(USER)/boot
-  cp images/linux/image.ub /media/$(USER)/boot
+  cp images/linux/BOOT.BIN /media/$USER/boot
+  cp images/linux/image.ub /media/$USER/boot
+  cd -
+  ```
+
+- Copy the `rootfs` into the `root` directory on the SD card whose partition should be in EXT4 format:
+  ```
+  cd $PROJECT_DIR
+  cd images/linux
+  sudo tar xvfzp rootfs.ext4.gz --directory /media/$USER/root
+  cd - 
+  ```
+
+- Edit the SSID and password to be able to connect to the WiFi:
+  ```
+  cd $PROJECT_DIR
+  vim /media/$USER/root/home/root/wpa_supplicant.conf
   cd -
   ```
 
@@ -144,4 +159,9 @@ echo $PETALINUX
 - Login with
   - user `root`
   - password `root`
-
+ 
+- Start enable the WiFi
+  ```
+  sudo ./wifi.sh
+  ```
+  
