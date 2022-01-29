@@ -1,15 +1,21 @@
 # PetaLinux
 
-PetaLinux (or Petalinux SDK) is a Xilinx development tool that contains everything necessary to build, develop, test, and deploy embedded Linux systems (Zynq and ZynqMP boards). For more details see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
+PetaLinux is a Xilinx development tool that contains everything necessary to build, develop, test, and deploy embedded Linux systems (Zynq and ZynqMP boards). For more details see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
+
+These guidelines are for Avnet Ultra96-V2 and Petalinux v2019.1:
+- targeting a different board should be as easy as downloading a different Board Support Package (BSP);
+- targeting a different version of Petalinux may be easy as well, but these guidelines do not cover what changed with the introduction of Vitis.
+
+Finally, the guidelines have been tested wtih Ubuntu Linux 18.04.6 LTS. For a complete list of supported OSes see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
 
 ## Quick Install
 
-The following guidelines have been tested wtih Ubuntu Linux 18.04.6 LTS. For a complete list of supported OSes see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
-
-Install the required packages:
+Install some required packages:
 ```
 sudo apt-get install -y gcc git make net-tools libncurses5-dev tftpd zlib1g-dev libssl-dev flex bison libselinux1 gnupg wget diffstat chrpath socat xterm autoconf libtool tar unzip texinfo zlib1g-dev gcc-multilib build-essential libsdl1.2-dev libglib2.0-dev zlib1g:i386 screen pax gzip
 ```
+
+If something else is missing, please add it to the list above.
 
 Download the [PetaLinux 2019.1 installer](https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2019.1-final-installer.run). Autentication is required.
 
@@ -44,6 +50,8 @@ echo $PETALINUX
 
 ## Expedite Project Creation
 
+See the *Step-by-step Project Creation* section if you want to be a little more in control.
+
 - Just run:
   ```
   make create-kernel-image
@@ -62,7 +70,7 @@ echo $PETALINUX
 
 - See *Boot from SD Card* section.
 
-## Quick Project Creation
+## Step-by-step Project Creation
 
 - Setup the PetaLinux working environment:
   ```
@@ -81,7 +89,7 @@ echo $PETALINUX
   cd -
   ```
 
-- Create the project from the ZCU106 BSP:
+- Create the project from the Ultra96-V2 BSP:
   ```
   petalinux-create -t project -s bsp/ultra96v2_oob_2019_1.bsp
   ```
