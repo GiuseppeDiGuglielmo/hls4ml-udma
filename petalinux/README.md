@@ -4,7 +4,7 @@ PetaLinux is a Xilinx development tool that contains everything necessary to bui
 
 These guidelines are for Avnet Ultra96-V2 and Petalinux v2019.1:
 - targeting a different board should be as easy as downloading a different Board Support Package (BSP);
-- targeting a different version of Petalinux may be easy as well, but these guidelines do not cover what changed with the introduction of Vitis (things may be different there).
+- targeting a different version of Petalinux may be easy as well, but these guidelines do not cover what changed with the introduction of Vitis.
 
 Finally, the guidelines have been tested wtih Ubuntu Linux 18.04.6 LTS. For a complete list of supported OSes see the Reference Guide [UG114 v2019.1](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_1/ug1144-petalinux-tools-reference-guide.pdf).
 
