@@ -89,7 +89,7 @@ See the *Step-by-step Project Creation* section if you want to be a little more 
   cd -
   ```
 
-- Create the project from the ZCU106 BSP:
+- Create the project from the Ultra96-V2 BSP:
   ```
   petalinux-create -t project -s bsp/ultra96v2_oob_2019_1.bsp
   ```
