@@ -54,7 +54,7 @@ See the *Step-by-step Project Creation* section if you want to be a little more 
 
 - Just run:
   ```
-  make create-kernel-image
+  make create-image
   ```
 
 - Mount the SD card on your host machine.
